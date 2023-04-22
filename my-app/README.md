@@ -1,3 +1,5 @@
+**React Weather App**
+
 Weather App created with React.
 
 Used an API to use live data to allow the user to see real time weather conditions from different cities around the world.
