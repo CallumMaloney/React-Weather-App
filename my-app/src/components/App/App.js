@@ -23,7 +23,6 @@ function App() {
       setWeather(data)
 
       // setting dynamic background
-
       if( data.temp < (units === "metric" ? 10 : 50) ){   // if temp is less than 10C or 50F 
         setBackground(cold5)
       }else if( data.temp > (units === "metric" ? 20 : 68) ){  //  if temp is more than 20C or 68F 
@@ -31,7 +30,6 @@ function App() {
       }else{ // if temp is between 10C and 20C or 50F and 68F 
         setBackground(mild)
       }
-
     } 
     fetchWeatherData();
   },[units, cityChoice])
@@ -40,7 +38,6 @@ function App() {
     const btn = event.currentTarget; 
     const currentUnit = btn.innerText.slice(1) // currentUnit is = btn text without the °
 
-
     const isCelsius = currentUnit === "C"; 
     btn.innerText = isCelsius ? "°F" : "°C";
     setUnits(isCelsius ? "imperial" : "metric") // change units
@@ -48,7 +45,8 @@ function App() {
 
   function enterKeyPressed(event){ // enter key pressed
     if(event.keyCode === 13){
-      setCityChoice(event.currentTarget.value)
+      setCityChoice(event.currentTarget.value) // set cityChoice to input value
+      event.currentTarget.value = "" // clear input
       event.currentTarget.blur() // remove focus from input
     }
   }

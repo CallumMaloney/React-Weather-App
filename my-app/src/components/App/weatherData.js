@@ -1,6 +1,8 @@
 const apiKey = "9eb5bf2d4b408c813b3d85664a77c25d"; // API key from openweathermap.org
 
-const makeIconUrl = (iconId) => `https://openweathermap.org/img/wn/${iconId}@2x.png` // make icon url with dynamic icon id
+function makeIconUrl(iconId) {
+  return `https://openweathermap.org/img/wn/${iconId}@2x.png`;
+}
 
 const getWeatherData = async (city, units="metric") =>{ // get weather data from API
 
