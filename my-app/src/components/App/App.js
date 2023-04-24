@@ -2,6 +2,7 @@ import cold5 from "../../assets/cold5.jpg";
 import hot from "../../assets/hot.jpg";
 import mild from "../../assets/mild.jpg";
 import Descriptions from "../Descriptions/Descriptions";
+import FiveDayForecast from "../FiveDayForecast/FiveDayForecast";
 import { useEffect, useState } from "react";
 import getWeatherData from "./weatherData";
 
@@ -79,6 +80,7 @@ function App() {
               <h1>{`${weather.temp.toFixed()}°${units === "metric" ? "C" : "F"}`}</h1> {/* if units === "metric" is true, temp = "C", if false, temp = "F" */}
             </div>
           </div>
+          <FiveDayForecast weather={weather} units={units}/> {/* pass weather data and units to FiveDayForecast component */}
 
           {/* bottom description */}
           <Descriptions weather={weather} units={units}/> {/* pass weather data and units to Descriptions component */}
