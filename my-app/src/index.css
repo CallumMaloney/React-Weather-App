@@ -107,3 +107,12 @@
   
 
 }
+@media screen and (max-height: 927px){
+
+  .section.section__inputs{
+    margin-bottom: .6em;
+  }
+  .section__inputs>input{
+    font-size: 14px;
+  }
+}

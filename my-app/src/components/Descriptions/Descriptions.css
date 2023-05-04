@@ -1,7 +1,8 @@
 .section__descriptions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 2.0rem;
+    margin-top: 2rem;
   }
 
   .card{
@@ -12,6 +13,7 @@
     background-color: var(--section-overlay);
     padding: 1rem;
     border-radius: .8rem;
+
   }
 
   .card:hover{
@@ -41,6 +43,25 @@
   @media screen and (max-width: 500px){
     .section__descriptions{
       grid-template-columns: repeat(1, 1fr);
+      width: 20em;
+
+    }
+    .card{
+      width: 17em;
+      height: 4.5em;
     }
 
+  }
+
+  @media screen and (max-height: 928px){
+    .card{
+      width: 17em;
+      height: 4.3em;
+    }
+    .card>h2{
+      font-size: 1.2rem;
+    }
+    .section__descriptions{
+      margin-top: .1em;
+    }
   }
