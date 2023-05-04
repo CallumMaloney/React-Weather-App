@@ -50,18 +50,56 @@
       width: 17em;
       height: 4.5em;
     }
+    
 
   }
+  
 
   @media screen and (max-height: 928px){
     .card{
-      width: 17em;
+      width: 15em;
       height: 4.3em;
     }
     .card>h2{
-      font-size: 1.2rem;
+      font-size: 1rem;
+    }
+    .section__descriptions{
+      margin-top: .1em;
+      margin-left: 1.2em;
+    }
+  }
+
+  @media screen and (max-height: 883px){
+    .section__descriptions{
+      margin-left: 4em;
+    }
+    .card{
+      width: 13em;
+      height: 4em;
+    }
+    .card>h2{
+      font-size: .9rem;
     }
     .section__descriptions{
       margin-top: .1em;
     }
   }
+
+  @media screen and (max-height: 775px){
+    .section__descriptions{
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 0;
+    }
+    .card{
+      width: 8em;
+      height: 4em;
+      justify-content: space-around
+    }
+    .card>h2{
+      font-size: .8rem;
+    }
+    .section__descriptions{
+      margin-top: .1em;
+    }
+  }
+

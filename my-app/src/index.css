@@ -15,12 +15,14 @@
   height: 100vh;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  
   
 }
 
 .overlay{
   width:100%;
-  height: 100%;
+  height: auto;
   background-color: var(--background-overlay);
   
 }
@@ -28,7 +30,7 @@
 .container{
   max-width: 800px;
   margin: auto;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,4 +117,12 @@
   .section__inputs>input{
     font-size: 14px;
   }
+}
+
+@media screen and (max-width: 410px){
+    
+  .section__inputs>button{
+    padding:10px 30px;
+  }
+
 }
